@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TramiSmart - Evaluador de Requisitos con IA</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandTeal: '#005A5B',
+            brandCoral: '#FF6F59',
+            brandCyan: '#00A896',
+            brandLightBg: '#F0FDF8'
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased selection:bg-brandCyan selection:text-white">
+
+  <!-- CABECERA: LOGO MÁS GRANDE CON LETRAS AL COSTADO Y ALINEADO A LA IZQUIERDA -->
+  <header class="bg-white border-b border-gray-200 sticky top-0 z-40 shadow-sm py-2">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      
+      <!-- LOGO MÁS GRANDE + TEXTO AL COSTADO -->
+      <div class="flex items-center space-x-3">
+        <img src="logo.jpg" alt="TramiSmart Logo" class="h-14 sm:h-16 w-auto object-contain" onerror="this.onerror=null; this.src='https://i.ibb.co/L89Yf3m/tramismart-logo.png';">
+        <div class="flex flex-col justify-center">
+          <span class="text-2xl sm:text-3xl font-black text-brandTeal tracking-tight leading-none block">
+            Trami<span class="text-brandCyan">Smart</span>
+          </span>
+          <span class="block text-[9px] sm:text-[10px] text-brandCyan font-bold uppercase tracking-widest mt-1">
+            GESTIONES ÁGILES Y DIGITALES
+          </span>
+        </div>
+      </div>
+      
+      <!-- CTA Cabecera -->
+      <div>
+        <a href="#formulario-test" class="bg-brandCoral hover:bg-orange-600 text-white text-xs sm:text-sm font-extrabold px-4 py-2 rounded-xl shadow-md transition flex items-center space-x-1.5">
+          <i class="fas fa-bolt"></i>
+          <span>DIAGNÓSTICO GRATIS</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION (VERSIÓN A) -->
+  <section class="bg-brandTeal text-white relative py-10 lg:py-14">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        
+        <!-- Izquierda: Propuesta de Valor -->
+        <div class="lg:col-span-7 space-y-5">
+          <div class="inline-flex items-center space-x-2 bg-brandCyan/20 text-brandCyan border border-brandCyan/40 text-xs font-bold px-3 py-1 rounded-full">
+            <i class="fas fa-shield-alt"></i>
+            <span>Plataforma de Pre-validación Documental</span>
+          </div>
+
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black leading-tight tracking-tight">
+            Garantiza tu trámite <br>
+            <span class="text-brandCoral">sin perder días de clase o trabajo</span>
+          </h1>
+
+          <p class="text-gray-200 text-sm sm:text-base leading-relaxed max-w-2xl">
+            Usa nuestro evaluador con Inteligencia Artificial para auditar tu documentación, identificar requisitos faltantes y obtener tu ruta paso a paso antes de acudir a ventanilla.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+            <div class="bg-white/10 p-3 rounded-xl border border-white/10 flex items-center space-x-3">
+              <div class="w-8 h-8 rounded-lg bg-brandCyan/30 flex items-center justify-center text-brandCyan font-bold">
+                <i class="fas fa-search"></i>
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-gray-100">Detección de tasas no pagadas</span>
+            </div>
+            <div class="bg-white/10 p-3 rounded-xl border border-white/10 flex items-center space-x-3">
+              <div class="w-8 h-8 rounded-lg bg-brandCyan/30 flex items-center justify-center text-brandCyan font-bold">
+                <i class="fas fa-file-contract"></i>
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-gray-100">Auditoría de vigencia de DNI</span>
+            </div>
+          </div>
+
+          <!-- Imagen con personas reales realizando trámites -->
+          <div class="relative rounded-2xl overflow-hidden border border-brandCyan/30 shadow-xl max-w-lg mt-2">
+            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80" alt="Jóvenes realizando trámites" class="w-full h-40 sm:h-48 object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-brandTeal via-brandTeal/40 to-transparent"></div>
+            <div class="absolute bottom-3 left-4 right-4 flex items-center justify-between text-xs font-semibold text-white">
+              <span><i class="fas fa-check-circle text-brandCyan mr-1"></i> Optimizado para RUC 10, DNIe y Antecedentes</span>
+              <span class="bg-brandCoral px-2 py-0.5 rounded text-[10px] font-bold">100% Gratis</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Derecha: Formulario Lead Magnet (Versión A) -->
+        <div id="formulario-test" class="lg:col-span-5">
+          <div class="bg-white text-gray-800 rounded-3xl p-6 sm:p-8 shadow-2xl border-4 border-brandCyan/40 relative">
+            
+            <div class="text-center mb-5">
+              <span class="bg-teal-50 text-brandTeal font-extrabold text-[11px] px-3 py-1 rounded-full uppercase tracking-wider border border-teal-200">
+                Lead Magnet - Evaluación IA
+              </span>
+              <h3 class="text-xl sm:text-2xl font-black text-brandTeal mt-2">
+                Audita tu Trámite Gratis
+              </h3>
+              <p class="text-xs text-gray-500 mt-1">
+                Completa tus datos para analizar la validez de tus documentos.
+              </p>
+            </div>
+
+            <form onsubmit="handleFormSubmit(event)" class="space-y-3.5">
+              <div>
+                <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Nombres y Apellidos</label>
+                <input type="text" required placeholder="Ej. Juan Pérez" class="w-full px-3.5 py-2.5 rounded-xl border border-gray-300 focus:ring-2 focus:ring-brandTeal text-xs sm:text-sm outline-none">
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Correo de Contacto</label>
+                <input type="email" required placeholder="usuario@correo.com" class="w-full px-3.5 py-2.5 rounded-xl border border-gray-300 focus:ring-2 focus:ring-brandTeal text-xs sm:text-sm outline-none">
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Trámite a Realizar</label>
+                <select id="tramiteSelect" required class="w-full px-3.5 py-2.5 rounded-xl border border-gray-300 focus:ring-2 focus:ring-brandTeal text-xs sm:text-sm outline-none bg-white">
+                  <option value="" disabled selected>Selecciona una opción</option>
+                  <option value="RUC 10">Inscripción / Reactivación de RUC 10</option>
+                  <option value="Antecedentes">Certificado de Antecedentes Policiales</option>
+                  <option value="DNIe">Emisión / Renovación DNI Electrónico</option>
+                  <option value="Pasaporte">Cita y Tramitación de Pasaporte</option>
+                  <option value="Permisos">Permisos Especiales / Certificados</option>
+                </select>
+              </div>
+
+              <button type="submit" class="w-full bg-brandCoral hover:bg-orange-600 text-white font-extrabold py-3.5 px-5 rounded-xl shadow-lg transition text-sm tracking-wide flex items-center justify-center space-x-2 mt-2">
+                <span>INICIAR DIAGNÓSTICO GRATUITO</span>
+                <i class="fas fa-arrow-right text-xs"></i>
+              </button>
+
+              <div class="flex items-center justify-between text-[10px] text-gray-400 pt-2 border-t border-gray-100">
+                <span><i class="fas fa-lock text-brandCyan mr-1"></i> Cifrado AES-256</span>
+                <span><i class="fas fa-clock text-brandCoral mr-1"></i> Resultado en 3 min</span>
+              </div>
+            </form>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN BENEFICIOS DE LA EVALUACIÓN -->
+  <section class="py-12 bg-white border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-brandTeal">
+          Lo que descubrirás con tu evaluación
+        </h2>
+        <p class="text-gray-600 text-xs sm:text-sm mt-2">
+          Asegura la aprobación de tu expediente desde el primer intento con nuestra verificación inteligente.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-brandLightBg p-5 rounded-2xl border border-teal-100">
+          <div class="w-10 h-10 bg-brandTeal text-white rounded-xl flex items-center justify-center mb-3 text-lg">
+            <i class="fas fa-tasks"></i>
+          </div>
+          <h3 class="font-extrabold text-brandTeal text-base">Mapeo de Requisitos</h3>
+          <p class="text-gray-600 text-xs mt-1.5 leading-relaxed">Conoce exactamente qué documentos físicos o digitales debes presentar según la entidad pública.</p>
+        </div>
+
+        <div class="bg-orange-50 p-5 rounded-2xl border border-orange-100">
+          <div class="w-10 h-10 bg-brandCoral text-white rounded-xl flex items-center justify-center mb-3 text-lg">
+            <i class="fas fa-receipt"></i>
+          </div>
+          <h3 class="font-extrabold text-gray-900 text-base">Validación de Tasas</h3>
+          <p class="text-gray-600 text-xs mt-1.5 leading-relaxed">Verifica el código de pago exacto en Banco de la Nación o Págalo.pe para evitar cobros erróneos.</p>
+        </div>
+
+        <div class="bg-teal-50 p-5 rounded-2xl border border-teal-100">
+          <div class="w-10 h-10 bg-brandCyan text-white rounded-xl flex items-center justify-center mb-3 text-lg">
+            <i class="fas fa-camera"></i>
+          </div>
+          <h3 class="font-extrabold text-brandTeal text-base">Escaneo OCR Previo</h3>
+          <p class="text-gray-600 text-xs mt-1.5 leading-relaxed">La IA detecta errores comunes como firmas borrosas, fechas vencidas o datos ilegibles.</p>
+        </div>
+
+        <div class="bg-brandLightBg p-5 rounded-2xl border border-teal-100">
+          <div class="w-10 h-10 bg-brandTeal text-white rounded-xl flex items-center justify-center mb-3 text-lg">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <h3 class="font-extrabold text-brandTeal text-base">Ubicación de Sedes</h3>
+          <p class="text-gray-600 text-xs mt-1.5 leading-relaxed">Identifica los centros MAC o ventanillas con menor tiempo de cola estimado en tu zona.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECURSO SECUNDARIO CON CTA -->
+  <section class="py-10 bg-gray-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-lg border border-gray-200 md:flex items-center justify-between gap-8">
+        <div class="space-y-2 md:w-1/2">
+          <span class="bg-orange-100 text-brandCoral text-[10px] font-bold px-2.5 py-0.5 rounded-full uppercase tracking-wide">Recurso Adicional</span>
+          <h3 class="text-xl sm:text-2xl font-black text-brandTeal">Guía Práctica Antirrechazos 2026</h3>
+          <p class="text-gray-600 text-xs leading-relaxed">
+            Obtén en PDF el resumen ejecutivo con los 5 motivos más frecuentes por los que observan expedientes de jóvenes en mesa de partes.
+          </p>
+        </div>
+        <div class="mt-5 md:mt-0 md:w-1/2">
+          <form onsubmit="handleChecklistSubmit(event)" class="space-y-2.5">
+            <input type="text" required placeholder="Tu nombre" class="w-full px-3.5 py-2.5 rounded-xl border border-gray-300 text-xs outline-none focus:ring-1 focus:ring-brandTeal">
+            <input type="email" required placeholder="Tu correo electrónico" class="w-full px-3.5 py-2.5 rounded-xl border border-gray-300 text-xs outline-none focus:ring-1 focus:ring-brandTeal">
+            <button type="submit" class="w-full bg-brandTeal hover:bg-teal-800 text-white font-bold py-3 px-4 rounded-xl shadow transition text-xs flex items-center justify-center space-x-2">
+              <i class="fas fa-file-pdf text-brandCoral"></i>
+              <span>DESCARGAR GUÍA EN PDF</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER ACADÉMICO -->
+  <footer class="bg-brandTeal text-white py-6 border-t border-teal-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-2">
+      <span class="text-base font-bold text-white">TramiSmart</span>
+      <p class="text-[11px] text-gray-300 max-w-md mx-auto">
+        Iniciativa GovTech para la simplificación de trámites del Estado peruano orientada a jóvenes y estudiantes.
+      </p>
+      <div class="text-[10px] text-gray-400 pt-2 border-t border-teal-800/60">
+        © 2026 TramiSmart. Proyecto Académico – Universidad Peruana de Ciencias Aplicadas (UPC).
+      </div>
+    </div>
+  </footer>
+
+  <!-- CHATBOT FLOTANTE -->
+  <div class="fixed bottom-5 right-5 z-50">
+    <button id="chatToggle" onclick="toggleChat()" class="bg-brandCoral hover:bg-orange-600 text-white w-13 h-13 sm:w-14 sm:h-14 rounded-full shadow-2xl flex items-center justify-center text-xl sm:text-2xl transition-transform hover:scale-105">
+      <i class="fas fa-comment-dots"></i>
+    </button>
+
+    <div id="chatBox" class="hidden absolute bottom-16 right-0 w-80 sm:w-96 bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden text-gray-800">
+      <div class="bg-brandTeal p-3.5 text-white flex items-center justify-between">
+        <div class="flex items-center space-x-2">
+          <div class="w-7 h-7 rounded-full bg-brandCyan flex items-center justify-center text-xs font-bold">IA</div>
+          <div>
+            <h4 class="font-bold text-xs sm:text-sm">Asistente TramiSmart</h4>
+            <span class="text-[9px] text-teal-200 flex items-center"><span class="w-1.5 h-1.5 bg-green-400 rounded-full mr-1"></span> En línea</span>
+          </div>
+        </div>
+        <button onclick="toggleChat()" class="text-white hover:text-gray-300 text-sm"><i class="fas fa-times"></i></button>
+      </div>
+
+      <div id="chatMessages" class="p-3.5 h-60 overflow-y-auto space-y-2.5 text-xs bg-gray-50">
+        <div class="bg-white p-3 rounded-xl shadow-sm border border-gray-200 max-w-[85%]">
+          ¡Hola! 👋 Soy el asistente virtual. ¿Qué trámite necesitas auditar hoy para asegurarlo a la primera?
+        </div>
+      </div>
+
+      <div class="p-2.5 bg-white border-t border-gray-200 flex items-center space-x-2">
+        <input type="text" id="chatInput" placeholder="Escribe tu consulta..." onkeypress="handleChatKey(event)" class="w-full text-xs px-3 py-2 border border-gray-300 rounded-lg outline-none focus:ring-1 focus:ring-brandTeal">
+        <button onclick="sendChatMessage()" class="bg-brandTeal text-white px-3 py-2 rounded-lg text-xs hover:bg-teal-800 transition"><i class="fas fa-paper-plane"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleChat() {
+      document.getElementById('chatBox').classList.toggle('hidden');
+    }
+
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const tramite = document.getElementById('tramiteSelect').value;
+      alert(`¡Diagnóstico iniciado con éxito para: ${tramite}! Revisa tu correo para el resultado.`);
+    }
+
+    function handleChecklistSubmit(e) {
+      e.preventDefault();
+      alert('¡Guía Antirrechazos enviada con éxito en PDF!');
+    }
+
+    function sendChatMessage() {
+      const input = document.getElementById('chatInput');
+      const messages = document.getElementById('chatMessages');
+      if (!input.value.trim()) return;
+
+      const userDiv = document.createElement('div');
+      userDiv.className = 'bg-brandTeal text-white p-2.5 rounded-xl shadow-sm max-w-[85%] ml-auto text-xs';
+      userDiv.innerText = input.value;
+      messages.appendChild(userDiv);
+
+      const botDiv = document.createElement('div');
+      botDiv.className = 'bg-white p-2.5 rounded-xl shadow-sm border border-gray-200 max-w-[85%] text-xs';
+      botDiv.innerText = 'Te sugiero completar el formulario principal para auditar tus documentos y verificar los requisitos exactos.';
+      
+      setTimeout(() => {
+        messages.appendChild(botDiv);
+        messages.scrollTop = messages.scrollHeight;
+      }, 500);
+
+      input.value = '';
+      messages.scrollTop = messages.scrollHeight;
+    }
+
+    function handleChatKey(e) {
+      if (e.key === 'Enter') sendChatMessage();
+    }
+  </script>
+</body>
+</html>
